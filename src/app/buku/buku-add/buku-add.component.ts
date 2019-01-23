@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Buku} from '../buku.model';
 
 @Component({
@@ -10,6 +10,8 @@ export class BukuAddComponent implements OnInit {
 
   inputInfo: Buku = new Buku();
 
+  @Output() bukuAdded: EventEmitter<Buku> = new EventEmitter<Buku>();
+
   constructor() {
   }
 
@@ -18,5 +20,7 @@ export class BukuAddComponent implements OnInit {
 
   tambahBuku() {
     console.log(this.inputInfo);
+    this.bukuAdded.emit(this.inputInfo);
+    this.inputInfo = new Buku();
   }
 }
