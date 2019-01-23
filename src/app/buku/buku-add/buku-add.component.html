@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Tambah Buku</h4>
+      <div class="row">
+        <div class="form-group col-sm-3">
+          <input type="text" class="form-control" [(ngModel)]="inputInfo.isbn" placeholder="ISBN" id="inputNama">
+        </div>
+        <div class="form-group col-sm-3">
+          <input type="text" class="form-control" [(ngModel)]="inputInfo.nama" placeholder="Nama">
+        </div>
+        <div class="form-group col-sm-3">
+          <input type="number" class="form-control" [(ngModel)]="inputInfo.quantity" placeholder="Quantity">
+        </div>
+        <div class="form-group col-sm-3">
+          <button type="submit" class="btn btn-primary" (click)="tambahBuku()">Pilih</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
