@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BukuComponent } from './buku/buku.component';
 import { BukuAddComponent } from './buku/buku-add/buku-add.component';
 import { BukuListComponent } from './buku/buku-list/buku-list.component';
+import {HoverHighlightDirective} from './hover-highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     BukuComponent,
     BukuAddComponent,
-    BukuListComponent
+    BukuListComponent,
+    HoverHighlightDirective
   ],
   imports: [
     BrowserModule,
